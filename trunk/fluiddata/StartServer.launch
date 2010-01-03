@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
-<listEntry value="/fluiddata/src/org/fluiddata/StartServer.java"/>
+<listEntry value="/fluiddata/src/main/java/org/fluiddata/StartServer.java"/>
 </listAttribute>
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
 <listEntry value="1"/>
@@ -15,5 +15,5 @@
 <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="org.fluiddata.StartServer"/>
 <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="fluiddata"/>
 <stringAttribute key="org.eclipse.jdt.launching.SOURCE_PATH_PROVIDER" value="org.maven.ide.eclipse.launchconfig.sourcepathProvider"/>
-<stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Xmx128m"/>
+<stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Xmx528m"/>
 </launchConfiguration>
