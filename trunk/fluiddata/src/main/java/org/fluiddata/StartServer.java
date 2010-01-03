@@ -14,7 +14,7 @@ public class StartServer {
 
         WebAppContext webapp = new WebAppContext();
         webapp.setContextPath("/");
-        webapp.setWar("web");
+        webapp.setWar("war");
         server.setHandler(webapp);
         
         
