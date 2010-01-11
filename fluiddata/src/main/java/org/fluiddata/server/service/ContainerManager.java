@@ -7,4 +7,6 @@ public interface ContainerManager {
     public Folder getRootFolder(String base);
 
     public Configuration getConfiguration();
+
+    public void addWorkspace(String name, String path);
 }
