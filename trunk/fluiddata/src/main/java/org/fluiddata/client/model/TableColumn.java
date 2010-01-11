@@ -1,4 +1,4 @@
-package org.fluiddata.server.model;
+package org.fluiddata.client.model;
 
 /**
  * Column of a table
@@ -7,6 +7,7 @@ package org.fluiddata.server.model;
  * 
  */
 public class TableColumn extends Item {
+    private static final long serialVersionUID = 1L;
     private Table table;
     private DataType dataType;
     private int size;

@@ -1,4 +1,4 @@
-package org.fluiddata.server.model;
+package org.fluiddata.client.model;
 
 import java.util.ArrayList;
 import java.util.List;

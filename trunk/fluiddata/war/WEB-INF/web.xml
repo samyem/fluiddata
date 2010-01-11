@@ -14,13 +14,13 @@
    </context-param>
     
   <servlet>
-    <servlet-name>greetServlet</servlet-name>
-    <servlet-class>org.fluiddata.server.MyServiceImpl</servlet-class>
+    <servlet-name>rpcServlet</servlet-name>
+    <servlet-class>org.fluiddata.server.RPCServiceImpl</servlet-class>
   </servlet>
   
   <servlet-mapping>
-    <servlet-name>greetServlet</servlet-name>
-    <url-pattern>/org.fluiddata.FluidData/greet</url-pattern>
+    <servlet-name>rpcServlet</servlet-name>
+    <url-pattern>/org.fluiddata.FluidData/rpc</url-pattern>
   </servlet-mapping>
 
  

@@ -1,5 +1,6 @@
-package org.fluiddata.server.model;
+package org.fluiddata.client.model;
 
+import java.io.Serializable;
 import java.util.List;
 
 /**
@@ -8,7 +9,8 @@ import java.util.List;
  * @author samyem
  * 
  */
-public class TableRow {
+public class TableRow implements Serializable {
+    private static final long serialVersionUID = 1L;
     private Table table;
     private Integer row;
     private List<TableCell> cells;

@@ -1,4 +1,4 @@
-package org.fluiddata.server.model;
+package org.fluiddata.client.model;
 
 public interface DataType {
     String getName();
