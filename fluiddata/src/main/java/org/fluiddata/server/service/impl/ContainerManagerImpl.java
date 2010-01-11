@@ -6,9 +6,9 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 
-import org.fluiddata.server.model.Configuration;
-import org.fluiddata.server.model.Folder;
-import org.fluiddata.server.model.Workspace;
+import org.fluiddata.client.model.Configuration;
+import org.fluiddata.client.model.Folder;
+import org.fluiddata.client.model.Workspace;
 import org.fluiddata.server.service.ContainerManager;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.stereotype.Service;

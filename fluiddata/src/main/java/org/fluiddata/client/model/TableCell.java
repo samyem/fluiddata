@@ -1,4 +1,6 @@
-package org.fluiddata.server.model;
+package org.fluiddata.client.model;
+
+import java.io.Serializable;
 
 /**
  * A cell of a table that holds the data
@@ -6,7 +8,8 @@ package org.fluiddata.server.model;
  * @author samyem
  * 
  */
-public class TableCell {
+public class TableCell implements Serializable {
+    private static final long serialVersionUID = 1L;
     private Table table;
     private TableColumn column;
     private TableRow row;

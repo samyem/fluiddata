@@ -1,6 +1,6 @@
-package org.fluiddata.server.model;
+package org.fluiddata.client.model;
 
-import java.math.BigInteger;
+import java.io.Serializable;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
@@ -11,8 +11,10 @@ import java.util.Map;
  * @author samyem
  * 
  */
-public class Item {
-    private BigInteger id;
+public class Item implements Serializable {
+    private static final long serialVersionUID = 1L;
+    private Folder container;
+    private Integer id;
     private Map<String, Object> properties = new HashMap<String, Object>(0);
 
     /**
@@ -24,11 +26,11 @@ public class Item {
         return properties;
     }
 
-    public BigInteger getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(BigInteger id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -60,4 +62,12 @@ public class Item {
 
     private Date created;
     private Date modified;
+
+    public Folder getContainer() {
+        return container;
+    }
+
+    public void setContainer(Folder container) {
+        this.container = container;
+    }
 }

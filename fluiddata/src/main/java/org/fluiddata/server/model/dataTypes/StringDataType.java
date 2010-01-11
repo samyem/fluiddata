@@ -2,7 +2,7 @@ package org.fluiddata.server.model.dataTypes;
 
 import java.sql.Types;
 
-import org.fluiddata.server.model.DataType;
+import org.fluiddata.client.model.DataType;
 
 public class StringDataType implements DataType {
 
