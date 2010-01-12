@@ -1,6 +1,5 @@
 package org.fluiddata.client.model;
 
-
 /**
  * Item backed by a file
  * 
@@ -8,4 +7,5 @@ package org.fluiddata.client.model;
  * 
  */
 public class FileItem extends Item {
+    private static final long serialVersionUID = 1L;
 }

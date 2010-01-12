@@ -10,7 +10,7 @@ import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.RootPanel;
 
 public class Start implements EntryPoint {
-    RPCServiceAsync service = GWT.create(RPCService.class);
+    ContainerManagerAsync service = GWT.create(ContainerManager.class);
 
     public void onModuleLoad() {
         final Button sendButton = new Button("Send");
@@ -24,19 +24,6 @@ public class Start implements EntryPoint {
 
             public void onClick(ClickEvent event) {
                 Window.alert("hello world");
-
-                service.nothing("hello", new AsyncCallback<String>() {
-
-                    @Override
-                    public void onSuccess(String result) {
-                        Window.alert("hello world " + result);
-                    }
-
-                    @Override
-                    public void onFailure(Throwable caught) {
-
-                    }
-                });
             }
         });
 

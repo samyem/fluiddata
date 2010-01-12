@@ -17,5 +17,8 @@
 		<g:Label ui:field="label"></g:Label>
 		
 		<g:Button styleName="{style.important}" ui:field="button" />
+		
+		<g:Tree ui:field="tree"></g:Tree>
+		
 	</g:HTMLPanel>
 </ui:UiBinder> 

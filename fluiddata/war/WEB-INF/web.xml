@@ -17,7 +17,17 @@
     <servlet-name>rpcServlet</servlet-name>
     <servlet-class>org.fluiddata.server.RPCServiceImpl</servlet-class>
   </servlet>
-  
+
+  <!-- SpringGwt remote service servlet -->
+	<servlet>
+	        <servlet-name>springGwtRemoteServiceServlet</servlet-name>
+	        <servlet-class>org.spring4gwt.server.SpringGwtRemoteServiceServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	        <servlet-name>springGwtRemoteServiceServlet</servlet-name>
+	        <url-pattern>/springGwtServices/*</url-pattern>
+	</servlet-mapping>
+
   <servlet-mapping>
     <servlet-name>rpcServlet</servlet-name>
     <url-pattern>/org.fluiddata.FluidData/rpc</url-pattern>
