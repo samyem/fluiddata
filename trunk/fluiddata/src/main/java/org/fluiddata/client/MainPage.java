@@ -12,6 +12,7 @@ import com.google.gwt.event.logical.shared.OpenHandler;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;
 import com.google.gwt.uibinder.client.UiHandler;
+import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.Composite;
@@ -26,6 +27,7 @@ import com.google.gwt.user.client.ui.Widget;
  * 
  */
 public class MainPage extends Composite {
+    private static final String loadingIndicator="_L";
     private RPCServiceAsync service = GWT.create(RPCService.class);
     private ContainerManagerAsync containerManager = GWT.create(ContainerManager.class);
 
@@ -54,7 +56,14 @@ public class MainPage extends Composite {
             
             @Override
             public void onOpen(OpenEvent<TreeItem> event) {
+                Window.alert("Tree opened");
                 
+                TreeItem target = event.getTarget();
+                
+                //is it loaded yet?
+                if(target.getChildCount()==1 && target.getChild(0).getUserObject().equals(loadingIndicator)){
+                    Window.alert("Need to load");                    
+                }
             }
         });
         
@@ -70,14 +79,18 @@ public class MainPage extends Composite {
                 
                 
                 TreeItem item=new TreeItem(result.getName());
+
+                TreeItem loadingItem=new TreeItem("Loading...");
+                loadingItem.setUserObject(loadingIndicator);
+                
+                item.addItem(loadingItem);
                 
                 tree.addItem(item);
             }
             
             @Override
             public void onFailure(Throwable caught) {
-                // TODO Auto-generated method stub
-                
+                Window.alert("error"+caught);
             }
         });
     }

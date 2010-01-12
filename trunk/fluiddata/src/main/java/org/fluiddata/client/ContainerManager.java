@@ -9,7 +9,7 @@ import org.fluiddata.client.model.Item;
 import com.google.gwt.user.client.rpc.RemoteService;
 import com.google.gwt.user.client.rpc.RemoteServiceRelativePath;
 
-@RemoteServiceRelativePath("/springGwtServices/containerManager")
+@RemoteServiceRelativePath("springGwtServices/containerManager")
 public interface ContainerManager extends RemoteService {
     public Folder getRootFolder(String base);
 

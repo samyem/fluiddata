@@ -16,9 +16,10 @@
 		Base folder: <g:TextBox ui:field="baseFolder"></g:TextBox>
 		<g:Label ui:field="label"></g:Label>
 		
-		<g:Button styleName="{style.important}" ui:field="button" />
-		
-		<g:Tree ui:field="tree"></g:Tree>
+		<g:Button ui:field="button" />
+		<br/>
+		<g:Tree ui:field="tree">			
+		</g:Tree>
 		
 	</g:HTMLPanel>
 </ui:UiBinder> 
