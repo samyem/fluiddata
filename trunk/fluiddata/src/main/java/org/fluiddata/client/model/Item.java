@@ -15,6 +15,7 @@ public class Item implements Serializable {
     private static final long serialVersionUID = 1L;
     private Folder container;
     private Integer id;
+    private String path;
     private Map<String, Object> properties = new HashMap<String, Object>(0);
 
     /**
@@ -69,5 +70,13 @@ public class Item implements Serializable {
 
     public void setContainer(Folder container) {
         this.container = container;
+    }
+
+    public String getPath() {
+        return path;
+    }
+
+    public void setPath(String path) {
+        this.path = path;
     }
 }

@@ -2,9 +2,9 @@ package org.fluiddata.server.service.impl;
 
 import java.util.List;
 
+import org.fluiddata.client.ContainerManager;
 import org.fluiddata.client.model.Configuration;
 import org.fluiddata.client.model.Workspace;
-import org.fluiddata.server.service.ContainerManager;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.test.context.ContextConfiguration;

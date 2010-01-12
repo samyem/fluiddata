@@ -5,11 +5,14 @@ import java.beans.XMLEncoder;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
+import java.util.ArrayList;
+import java.util.List;
 
+import org.fluiddata.client.ContainerManager;
 import org.fluiddata.client.model.Configuration;
 import org.fluiddata.client.model.Folder;
+import org.fluiddata.client.model.Item;
 import org.fluiddata.client.model.Workspace;
-import org.fluiddata.server.service.ContainerManager;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.stereotype.Service;
 
@@ -19,7 +22,7 @@ import org.springframework.stereotype.Service;
  * @author samyem
  * 
  */
-@Service
+@Service("containerManager")
 public class ContainerManagerImpl implements ContainerManager, InitializingBean {
     private String homeDir;
     private File fluidDataConfig;
@@ -34,7 +37,27 @@ public class ContainerManagerImpl implements ContainerManager, InitializingBean 
 
         Folder folder = new Folder();
         folder.setName(baseFile.getName());
+        folder.setPath("/");
         return folder;
+    }
+
+    public List<Item> getItems(String base, String path) {
+        File pathFile = new File(base, path);
+
+        File[] listFiles = pathFile.listFiles();
+        List<Item> items = new ArrayList<Item>(listFiles.length);
+        for (File file : listFiles) {
+            Item item;
+            if (file.isDirectory()) {
+                item = new Folder();
+            } else {
+                item = new Item();
+            }
+            item.setName(file.getName());
+            item.setPath(path + "/" + item.getName());
+            items.add(item);
+        }
+        return items;
     }
 
     public Configuration getConfiguration() {
