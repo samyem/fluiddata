@@ -73,7 +73,6 @@ public class MainPage extends Composite {
                                     target.addItem(treeItem);
                                 }
                             }
-
                         }
 
                         @Override
