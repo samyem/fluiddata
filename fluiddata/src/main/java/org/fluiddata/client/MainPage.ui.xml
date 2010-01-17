@@ -9,12 +9,19 @@
 	</ui:style>
 	<g:HTMLPanel>
 
-		Base folder: <g:TextBox ui:field="baseFolder"></g:TextBox>
+		<div>
+			Base folder: <g:TextBox ui:field="baseFolder"></g:TextBox> <g:Button ui:field="button" text="Start"/>
+		</div>
 		
-		<g:Button ui:field="button" text="Start"/>
-		<br/>
-		<g:Tree ui:field="tree">			
-		</g:Tree>
+ 		<g:SplitLayoutPanel height="100%" width="100%">
+ 			<g:west size="200">
+				<g:Tree ui:field="tree">
+				</g:Tree>
+ 			</g:west>
+ 			<g:center>
+ 				<g:Label>baker</g:Label>
+ 			</g:center> 		
+ 		</g:SplitLayoutPanel>
 		
 	</g:HTMLPanel>
 </ui:UiBinder> 
